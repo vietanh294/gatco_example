@@ -24,6 +24,7 @@ sqlalchemy.url = sqlite:///database.db
 then excute:
 ```bash
 # run alembic to migrate database
+$ mkdir alembic/versions
 $ alembic revision --autogenerate -m "initdb"
 $ alembic upgrade head
 $ python manage run
