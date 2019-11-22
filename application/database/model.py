@@ -7,11 +7,7 @@ from sqlalchemy import (
     event, func
 )
 
-from sqlalchemy.dialects.postgresql import UUID
-
 from application.database import db
-
-#Base = declarative_base()
 
 def default_uuid():
     return str(uuid.uuid4())

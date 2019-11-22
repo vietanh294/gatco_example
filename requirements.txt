@@ -16,7 +16,7 @@ git+https://github.com/gonrin/gatco.git
 git+https://github.com/gonrin/gatco_auth.git
 git+https://github.com/gonrin/gatco_jinja2.git
 git+https://github.com/gonrin/gatco_sqlalchemy.git
-git+https://github.com/gonrin/gatco_restapi.git
+git+https://github.com/gonrin/gatco_apimanager.git
 git+https://github.com/gonrin/gatco_acl.git
 six
 SQLAlchemy

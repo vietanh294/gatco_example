@@ -7,5 +7,3 @@ class Config(object):
     AUTH_PASSWORD_SALT = 'add_salt'
     SECRET_KEY = 'acndef'
     SESSION_COOKIE_SALT = 'salt_key'
-    IMAGE_SERVICE_URL = '/static'
-    FS_ROOT= "/tmp/"
