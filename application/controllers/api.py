@@ -11,20 +11,19 @@ def auth_func(request=None, **kw):
     
     pass
 
-apimanager.create_api(User,
+apimanager.create_api(collection_name='user', model=User,
     methods=['GET', 'POST', 'DELETE', 'PUT'],
     url_prefix='/api/v1',
     preprocess=dict(GET_SINGLE=[auth_func], GET_MANY=[auth_func], POST=[auth_func], PUT_SINGLE=[auth_func]),
-    collection_name='user',
     include_columns=['id', 'birthday', 'email','is_active'])
 
-apimanager.create_api(collection_name='quocgia', Model=QuocGia,
+apimanager.create_api(collection_name='quocgia', model=QuocGia,
     methods=['GET', 'POST', 'DELETE', 'PUT'],
     url_prefix='/api/v1',
     preprocess=dict(GET_SINGLE=[auth_func], GET_MANY=[auth_func], POST=[auth_func], PUT_SINGLE=[auth_func]),
     )
 
-apimanager.create_api(collection_name='tinhthanh', Model=TinhThanh,
+apimanager.create_api(collection_name='tinhthanh', model=TinhThanh,
     methods=['GET', 'POST', 'DELETE', 'PUT'],
     url_prefix='/api/v1',
     preprocess=dict(GET_SINGLE=[auth_func], GET_MANY=[auth_func], POST=[auth_func], PUT_SINGLE=[auth_func]),

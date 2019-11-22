@@ -36,6 +36,8 @@ $ cd static/js
 $ git clone https://github.com/gonrin/GonrinJS.git lib
 $ cd ../vendor/
 $ git clone https://github.com/gonrin/GonrinUI.git
+$ cd ../..
+$ python manage.py run
 ```
 
 # Now, service is running:

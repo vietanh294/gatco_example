@@ -1,6 +1,6 @@
 from .useragent import GatcoUserAgent
 from gatco_auth import Auth
-from gatco_restapi import APIManager
+from gatco_apimanager import APIManager
 from gatco_acl.acl import ACL 
 from .jinja import Jinja
 from application.database import db
