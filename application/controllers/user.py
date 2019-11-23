@@ -3,7 +3,7 @@ from application.server import app
 from application.database import db
 from application.extensions import auth
 
-from gatco_restapi.helpers import to_dict
+# from gatco_restapi.helpers import to_dict
 
 from application.models.model import User
 

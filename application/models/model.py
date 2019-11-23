@@ -55,6 +55,7 @@ class QuocGia(CommonModel):
     id = db.Column(Integer, primary_key=True)
     ma = db.Column(String(255), unique=True)
     ten = db.Column(String(255), nullable=False)
+    mota = db.Column(String(255), nullable=True)
     tinhthanh = db.relationship("TinhThanh", order_by="TinhThanh.id", cascade="all, delete-orphan")
     
 class TinhThanh(CommonModel):

@@ -15,10 +15,11 @@ define(function (require) {
     	uiControl:{
     		fields: [
 	    	     { 
-	    	    	field: "id",label:"ID",width:250,readonly: true, 
+	    	    	field: "id",label:"ID",
 	    	     },
-	    	     { field: "ma", label: "Mã", width:250},
-		     	 { field: "ten", label: "Tên", width:250 },
+	    	     { field: "ma", label: "Mã"},
+				  { field: "ten", label: "Tên", width:250 },
+				  { field: "mota", label: "Mô tả" },
 		     ],
 		     onRowClick: function(event){
 		    	if(event.rowId){

@@ -2,7 +2,6 @@ from application.extensions import apimanager
 from application.models.model import User, QuocGia, TinhThanh
 from application.extensions import auth
 from gatco.exceptions import ServerError
-from gatco_restapi import  ProcessingException
 
 def auth_func(request=None, **kw):
     #uid = auth.current_user(request)

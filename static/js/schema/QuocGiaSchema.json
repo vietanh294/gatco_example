@@ -25,6 +25,10 @@
         "required": true,
         "length": 255
     },
+    "mota": {
+        "type": "string",
+        "length": 255
+    },
     "tinhthanh": {
         "type": "list"
     }
