@@ -37,6 +37,7 @@ $ git clone https://github.com/gonrin/GonrinJS.git lib
 $ cd ../vendor/
 $ git clone https://github.com/gonrin/GonrinUI.git
 $ cd ../..
+$ python manage.py generate_schema
 $ python manage.py run
 ```
 

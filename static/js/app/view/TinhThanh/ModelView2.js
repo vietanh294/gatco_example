@@ -8,10 +8,30 @@ define(function (require) {
     	schema 				= require('json!schema/TinhThanhSchema.json');
     var QuocGiaSelectView   = require('app/view/QuocGia/SelectView');
     
+    
+    var Model = Gonrin.Model.extend({
+    	defaults: Gonrin.getDefaultModel(schema),
+    	computeds: {
+	    	quocgia: {
+	    		deps: ["quocgia_id", "tenquocgia"],
+	            get: function( quocgia_id, tenquocgia ) {
+	                return {
+						"id": quocgia_id,
+						"ten": tenquocgia,
+						};
+	            },
+	            set: function( obj ) {
+	                return {quocgia_id: obj.id, tenquocgia: obj.ten};
+	            }
+		    },
+    	},
+		urlRoot : "/api/v1/tinhthanh"
+    });
+    
     return Gonrin.ModelView.extend({
     	template : template,
-    	modelSchema	: schema,
-    	// modelClass: Model,
+    	//modelSchema	: schema,
+    	modelClass: Model,
     	urlPrefix: "/api/v1/",
     	collectionName: "tinhthanh",
     	tools : [

@@ -1,6 +1,7 @@
 from .useragent import GatcoUserAgent
 from gatco_auth import Auth
 from gatco_apimanager import APIManager
+from gatco_apimanager.views.sqlalchemy import APIView
 from gatco_acl.acl import ACL 
 from .jinja import Jinja
 from application.database import db
@@ -21,9 +22,7 @@ racl = ACL()
 def init_extensions(app):
     GatcoUserAgent.init_app(app)
     auth.init_app(app)
-    #sqlalchemy or motor
-    #with scoped_session() as session:
-    apimanager.init_app(app, sqlalchemy_db=db)
+    apimanager.init_app(app, view_cls=APIView, db=db)
     jinja.init_app(app)
     racl.init_app(app)
     
